@@ -43,7 +43,4 @@ RUN mvn clean install
 RUN chmod +x data-processing-scripts/scripts/*
 
 # Copy files to data dir
-COPY data/* /AgePredictor/data/
-
-# Set entrypoint
-#ENTRYPOINT ["/bin/bash", "-c"]
+ADD data/* /AgePredictor/data/
